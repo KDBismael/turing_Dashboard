@@ -1,0 +1,20 @@
+export type Creative = {
+  id: string;
+  product: string;
+  creator: string;
+  contentType: string;
+  angle: string;
+  hook: string;
+  month: string;
+  status: string;
+  budgetSpent: number;
+  conversions: number;
+  estimatedRevenue: number;
+  roas: number;
+  cpa: number;
+  impressions: number;
+  clicks: number;
+  ctr: number;
+  launchDate?: string;
+  previewLink?: string;
+};
