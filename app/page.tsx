@@ -224,7 +224,7 @@ function FilterSelect({
       {label}
       <select
         value={value}
-        onChange={(e) => onChange(e.target.value as FilterValue)}
+        onChange={(e) => onChange(e.target.value)}
         className="h-10 rounded-lg border border-slate-200 bg-white px-3 text-sm text-slate-900 shadow-sm focus:border-blue-500 focus:outline-none"
       >
         <option value="all">Tous</option>
