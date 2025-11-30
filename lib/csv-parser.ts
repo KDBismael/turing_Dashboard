@@ -1,4 +1,6 @@
-import Papa from "papaparse";
+"use client";
+
+type PapaParseModule = typeof import("papaparse");
 import { Creative } from "./types";
 
 type Row = Record<string, any>;
@@ -25,6 +27,8 @@ const fieldMap: Record<keyof Creative, string[]> = {
 };
 
 export async function parseCsvFile(file: File): Promise<Creative[]> {
+  const Papa = (await import("papaparse")).default;
+
   return new Promise((resolve, reject) => {
     Papa.parse<Row>(file, {
       header: true,
